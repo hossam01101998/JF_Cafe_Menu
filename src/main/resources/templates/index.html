@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head><!--th:insert="~{menutemplate::header('index')}"-->
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <style> table{ border: 2px solid black;}</style>
+    <link rel="stylesheet" th:href="@{housestyle.css}">
+</head>
+<body>
+<nav th:insert="~{menutemplate::navbar}"/>
+<!-- <nav>
+    <ul>
+        <li><a th:href="@{~/index}">Home</a></li>
+        <li><a th:href="@{~/newdrink}">New Drink</a> </li>
+        <li><a th:href="@{~/about}">About</a></li>
+    </ul>
+</nav> -->
+    <!--<p>Hello world!!</p>
+    <p th:text="${drinks}"></p> -->
+    <table>
+        <thead>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Actions</th>
+        </thead>
+
+        <tbody>
+<tr th:each="drink : ${drinks}">
+    <td>
+        <span th:text="${drink.name}"/>
+    </td>
+    <br>
+    <ul>
+        <li th:each="note : ${drink.tastingNotes}">
+            <span th:text="${note.description}"/></span>
+
+        </li>
+
+
+    </ul>
+
+    <td> <span th:text="${drink.price}"/></td>
+    <td><a th:href="@{delete/{id}(id=${drink.id})}">Delete</a></td>
+
+</tr>
+</tbody>
+    </table>
+</body>
+</html>

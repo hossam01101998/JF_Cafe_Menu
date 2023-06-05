@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Menutemplate</title>
+    <link rel="stylesheet" th:href="@{housestyle.css}">
+
+</head>
+<body>
+<nav th:fragment="navbar">
+  <ul>
+    <li><a th:href="@{~/index}" th:text="#{navbar.index}"></a></li>
+    <li><a th:href="@{~/newdrink}" th:text="#{navbar.new}"></a> </li>
+    <li><a th:href="@{~/about}" th:text="#{navbar.about}"></a></li>
+    <li><a href="http://www.google.es">Geheime optie</a></li>
+
+  </ul>
+</nav>
+</body>
+</html>

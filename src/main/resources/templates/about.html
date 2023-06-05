@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About</title>
+    <link rel="stylesheet" th:href="@{housestyle.css}">
+
+</head>
+<body>
+<!-- Se puede usar solo esto, para que cambiando solo uno se actualice todo-->
+<nav th:insert="~{menutemplate::navbar}"/>
+<!--
+<nav>
+    <ul>
+        <li><a th:href="@{~/index}">Home</a></li>
+        <li><a th:href="@{~/newdrink}">New Drink</a> </li>
+        <li><a th:href="@{~/about}">About</a></li>
+    </ul>
+</nav>-->
+    <h1>About us</h1>
+</body>
+</html>

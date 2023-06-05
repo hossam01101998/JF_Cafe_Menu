@@ -1,0 +1,37 @@
+.error_text{
+    color: red;
+}
+h1{
+    background-color: blue;
+}
+nav{
+    background-color: greenyellow;
+    z-index: 9999999999;
+}
+nav ul{
+
+    list-style: none;
+    display:flex;
+    justify-content: center;
+    gap: 100px;
+}
+nav ul li{
+    display: inline-block;
+    font-size: 50px;
+    color: cornflowerblue;
+}
+nav ul li a{
+    text-decoration: none;
+
+}
+table{
+    font-family: Calibri;
+    color: black;
+    font-size: 30px;
+    padding: 10px;
+    margin: 0;
+
+}
+table thead tr, table thead{
+    padding: 40px;
+}

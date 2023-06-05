@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>New Drink</title>
+    <link rel="stylesheet" th:href="@{housestyle.css}">
+</head>
+<body>
+<nav th:insert="~{menutemplate::navbar}"/>
+
+<!--<nav>
+    <ul>
+        <li><a th:href="@{~/index}">Home</a></li>
+        <li><a th:href="@{~/newdrink}">New Drink</a> </li>
+        <li><a th:href="@{~/about}">About</a></li>
+    </ul>
+</nav>-->
+<h1>New Drink!</h1>
+    <form method="post" th:action="@{~/newdrink}" th:object="${drinktoSave}">
+        name: <input type="text" th:field="*{name}" placeholder="Naam">
+        <br>
+        price: <input type="text" th:field="*{price}" placeholder="Prijs">
+        <br>
+        <span th:if="${#fields.hasErrors()}" th:text="${#fields.allErrors()}" th:class="error_text"></span>
+        <button th:field="submit">Submit</button>
+
+
+
+    </form>
+</body>
+</html>
